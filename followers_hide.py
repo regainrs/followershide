@@ -189,7 +189,7 @@ def handle_verification(call):
     else:
         bot.answer_callback_query(call.id, "You have not joined all channels yet! Please join all 3.", show_alert=True)
 
-@bot.message_handler(func=lambda message: True)
+@bot.message_handler(func=lambda message: message.chat.type == 'private')
 def handle_message(message):
     user_id = message.from_user.id
     text = message.text.strip() if message.text else ""
