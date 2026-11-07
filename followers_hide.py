@@ -3,11 +3,11 @@ import threading
 from flask import Flask
 import telebot
 
-# Aapka Telegram Bot Token
-TOKEN = "7759089766:AAEU-XG5851lU62F-H44Vw9fQ3r3c738nv8u0"
+# Tera naya Telegram Bot Token
+TOKEN = "9167961260:AAFe0Ee4hCOfqH3MR91AHwVc9YFrvkMCo-Y"
 bot = telebot.TeleBot(TOKEN)
 
-# 1. Render ke Web Service ke liye Flask server (Port binding fix ke liye)
+# 1. Render ke Web Service ke liye Flask server (Port binding fix)
 app = Flask(__name__)
 
 @app.route('/')
@@ -22,7 +22,6 @@ def run_flask():
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     try:
-        # reply_to ki jagah send_message use kiya hai taaki 400 Bad Request error na aaye
         bot.send_message(
             message.chat.id, 
             "👋 Welcome! EPROOX Followers Hide Bot is active."
