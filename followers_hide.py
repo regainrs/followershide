@@ -22,7 +22,7 @@ def run_flask():
     app.run(host="0.0.0.0", port=port)
 
 # Your Telegram Bot Token & Channel List
-TOKEN = "9167961260:AAFe0Ee4hCOfqH3MR91AHwVc9YFrvkMCo-Y"
+TOKEN = "9167961260:AAE_dk2lj9Ijo03lSCuqxKOUL7QwXpA_TOw"
 CHANNELS = [
     {"username": "@eproox", "url": "https://t.me/eproox"},
     {"username": "@workked", "url": "https://t.me/workked"},
